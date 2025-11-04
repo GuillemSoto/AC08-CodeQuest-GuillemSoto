@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -12,19 +12,19 @@ namespace CodeQuest
         public static void Train()
         {
             const string InputNameMsg = "What is your name?";
-            const string StartOfDayMsg = "Day {0}: {1], you have already medited {2} hours and your power is now {3} points!";
             //currentDay, name, trainingHours, powerLevel
             const string RankOne = "You repeat 2nd call";
             const string RankTwo = "You still mistake the wand for a spoon";
             const string RankThree = "You are a Magic Breeze Summoner.";
             const string RankFour = "Wow! You can summon dragons without burning the lab down!";
             const string RankFive = "You accomplished Arcane Master rank!";
-            const string TitleMsg = "Your title is {0}";
             const int MinHours = 1;
             const int MaxHours = 5;
             const int MinPower = 1;
             const int MaxPower = 10;
             bool validInput = true;
+            string StartOfDayMsg = "Day {0}: {1}, you have already medited {2} hours and your power is now {3} points!";
+            string TitleMsg = "Your title is {0}";
             string name = "";
             int mageLevel = 1;
             int currentDay = 1;
@@ -50,10 +50,10 @@ namespace CodeQuest
             } while (!validInput);
             for (currentDay = 1; currentDay<5; currentDay++)
             {
-                Console.WriteLine(StartOfDayMsg, currentDay, name, trainingHours, powerLevel);
-                
                 trainingHours += meditationHours.Next(MinHours, MaxHours);
                 powerLevel += powerLevelGain.Next(MinPower, MaxPower);
+                Console.WriteLine(StartOfDayMsg, currentDay, name, trainingHours, powerLevel);
+                
                 switch (powerLevel)
                 {
                     case <20:
