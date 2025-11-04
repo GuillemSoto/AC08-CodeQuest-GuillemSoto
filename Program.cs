@@ -5,7 +5,6 @@ public class Program
     static void Main()
     {   
         const string InputNameMsg = "What is your name?";
-        //currentDay, name, trainingHours, powerLevel
         const string RankOne = "You repeat 2nd call";
         const string RankTwo = "You still mistake the wand for a spoon";
         const string RankThree = "You are a Magic Breeze Summoner.";
@@ -17,6 +16,7 @@ public class Program
         const int MaxPower = 10;
         bool validInput = true;
         string StartOfDayMsg = "Day {0}: {1}, you have already medited {2} hours and your power is now {3} points!";
+        //currentDay, name, trainingHours, powerLevel
         string TitleMsg = "Your title is {0}";
         string name = "";
         int mageLevel = 1;
@@ -250,3 +250,4 @@ public class Program
     
     
 }
+
