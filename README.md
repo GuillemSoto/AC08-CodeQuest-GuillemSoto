@@ -1,41 +1,53 @@
-# ⚔️ # CodeQuest: L’aventura del programador/a de videojocs
 
-# ⚠️ Anotació
-
-- Tots els codis han d’incorporar **control d’errors**.  
-- La **codificació ha de ser en anglès** (missatges, comentaris, variables, constants, etc.).  
-- Cada capítol ha de ser una **branca** de l’estil:
-  - `chapter/trainwizard`
-  - `chapter/checkdungeon`
-  - `chapter/lootthemine`
 - Tots els *chapters* han de definir el **joc de proves** per després fer-lo servir al *Debug*.  
 - El **repositori** ha d’incloure un `README.md` amb el **joc de proves** i la **descripció del projecte**.  
-- Heu de gestionar la **creació d’issues** per cada *chapter*.  
-- Podeu consultar com **tancar o gestionar Pull Requests (PRs)** segons la documentació de GitHub.
 
-## Chapter 1. El camí del mag aprenent 🧙‍♀️
+## Chapter 1. Path of the learning mage
 
-Has estat admès a l’Acadèmia d’Arcanistes, però abans de començar necessites entrenar el teu poder màgic.
+I made a program here which just asks for the player's name and then calculates random numbers for the training hours and the power level gained, which prints a message at the start of the day.
+I used the Random class to get the random numbers and a for loop so that it only happens five times.
+At the end of each day, a message with your current power level and your current title appears, and this is made with a switch.
 
-Demana el **nom del mag** i defineix el seu **nivell inicial a 1**.  
-Cada dia d’entrenament (**5 dies**), el mag dedica una quantitat d’hores de meditació i obté una **quantitat aleatòria de poder** entre `1` i `10` punts.
+Trial game:
 
-Cada dia, mostra un missatge de la seva evolució dia a dia, amb un format similar a:
+Let's say name is always the same, as it doesn't really affect the program.
 
-Dia 3 → Azrael, ja has meditat 10 hores i el teu poder ara és de 27 punts!
+CurrentDay=1
+TrainingHours=0+3
+PowerLevel=0+6
+Message with current stats
+PowerLevel==6, so it enters the switch's first level where it prints the lowest title.
+CurrentDay++
 
-Al final, mostra el **nivell final de poder**. Segons el total:
+CurrentDay=2
+TrainingHours=3+5
+PowerLevel=6+9
+Message with current stats
+PowerLevel==15, so it enters the switch's first level where it prints the lowest title.
+CurrentDay++
 
-| Rang de poder | Missatge | Nivell obtingut |
-|----------------|-----------|----------------|
-| ≤ 20 | “Encara confons la vareta amb una cullera.” | Zyn el Buguejat |
-| < 30 | “Ets un Invocador de Brises Màgiques.” | Arka Nullpointer |
-| > 35 i < 40 | “Uau! Pots invocar dracs sense cremar el laboratori!” | Elarion de les Brases |
-| ≥ 47 | “Has assolit el rang de Mestre dels Arcans!” | ITB-Wizard el Gris |
+CurrentDay=3
+TrainingHours=8+2
+PowerLevel=15+4
+Message with current stats
+PowerLevel==19, so it enters the switch's first level where it prints the lowest title.
+CurrentDay++
 
-> 🔍 **TIP:** Investiga com crear nombres aleatoris amb la classe `Random`.
+CurrentDay=4
+TrainingHours=10+7
+PowerLevel=19+2
+Message with current stats
+PowerLevel==21, so it enters the switch's second level where it prints the second lowest title.
+CurrentDay++
 
----
+CurrentDay=5
+TrainingHours=17+5
+PowerLevel=21+3
+Message with current stats
+PowerLevel==24, so it enters the switch's second level where it prints the second lowest title.
+CurrentDay++
+
+CurrentDay=6, so it gets out of for range and the program ends.
 
 ## Chapter 2. El calabós del Drac RAMón el Poderós 🐉
 
