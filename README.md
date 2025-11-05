@@ -68,27 +68,55 @@ If the number is wrong, the program will add 1 to currentAttempt unless it's alr
 After getting out of the door the boolean attemptRunning will be false, and it will proceed to the next one and repeat the loop.
 
 
-## Chapter 3. Lotejar el botí 💰
+## Chapter 3. Looting the treasure
 
-Has derrotat al drac i has trobat una mina plena de **bitcoins màgics!**
+This program is automated, so the loop will always run five times (for loop).
+It just randomly decides whether you find something (a Random from 1 to 100), and you will find nothing 30% of the time
+Then if you do find something it will be randomly between 5 and 50 bitcoins, also random.
+Every attempt will be shown to the user and in the end a message telling them the total recollected and a good or bad message depending on the amount obtained.
 
-- Cada cop que mines, obtens una quantitat **aleatòria entre 5 i 50 bits**, o potser **res**.
-- Només pots fer **5 excavacions**.
-- Mostra el resultat de cada excavació.
+Trial game:
 
-A cada intent d’excavació pot haver-hi una **probabilitat de no trobar res**.  
-Si això passa, mostra:
+CurrentAttempt=1
+FoundSomething=20
+FoundSomething>BrickChance=false
+FoundNothing message
+CurrentAttempt++
 
-Avui no és el teu dia de sort, has trobat 0 bits.
+CurrentAttempt=2
+FoundSomething=40
+FoundSomething>BrickChance=true
+DailyAmountFound=10
+TotalAmount=0+10
+Daily message
+CurrentAttempt++
 
-Finalment:
+CurrentAttempt=3
+FoundSomething=60
+FoundSomething>BrickChance=true
+DailyAmountFound=20
+TotalAmount=10+20
+Daily message
+CurrentAttempt++
 
-- Si el total **> 200 bits**: Has desbloquejat la GPU d’or! Els teus encanteris van ara a 120 FPS!
-- Si el total **≤ 200 bits**: La teva targeta màgia encara és integrada. Toca derrotar a un altre drac!
+CurrentAttempt=4
+FoundSomething=80
+FoundSomething>BrickChance=true
+DailyAmountFound=40
+TotalAmount=30+40
+Daily message
+CurrentAttempt++
 
----
+CurrentAttempt=5
+FoundSomething=100
+FoundSomething>BrickChance=true
+DailyAmountFound=50
+TotalAmount=70+50
+Daily message
+CurrentAttempt++
 
-> ✨ *Recorda: cada mag comença com a aprenent, però fins i tot el millor arcanista va començar amb un bucle `for`...*
+CurrentAttempt=6
 
-
-
+Total message
+TotalAmount(120) < 200 = true
+Bad message
