@@ -49,23 +49,24 @@ CurrentDay++
 
 CurrentDay=6, so it gets out of for range and the program ends.
 
-## Chapter 2. El calabós del Drac RAMón el Poderós 🐉
+## Chapter 2. RAMon The Powerful's Dungeon
 
-El teu mag ha de demostrar el seu entrenament i ha d’entrar al **Calabós del Drac RAMón el Poderós**, on cada porta està protegida per un **codi d’accés digital**.
+This is a program with some fairly complicated loop logic, so basically I had to use two booleans, one to control if the player has finished the game, either by completing it or by losing at it, and the other to control the attempts of the current door, which is a maximum of three.
+Each of the three doors can be unlocked by inserting the correct number, which is a Random from one to five, and so to test whether the program worked correctly I had to use breakpoints to check the value of the random variable.
+The rest is some simple if/else logic to check if the inputted number is correct and if the number of attempts reached three or not, in which case the game would finish. The other way to finish the game would be beating it, in which case a message would pop up on the console confirming you beat it.
 
-- Hi ha **3 portes**.  
-- Cada una té un **codi aleatori entre 1 i 5**.  
-- Tens **3 intents per porta**.
+Trial game:
 
-Regles del joc:
+pass=true
+doorNumber=1, so when confirming if the reached door is one of the three it will say true and run the program until door 4 is reached, in which case the program will finish and tell you you won.
+currentAttempt=1, the user has three attempts per door.
+currentCode=2, a code is generated randomly.
+userNum=0, this makes sure that user won't skip checks by inputting a null value.
+userNum=2, The program then prompts the user to introduce a number and keeps trying until the user enters a valid one (so for example no 124 and no ñ)
+2=2, If the number matches the code, it will advance to the next door unless it's already door number 3, in which case the user will be told that they won.
+If the number is wrong, the program will add 1 to currentAttempt unless it's already the third attempt, in which case he will lose and the program will end, which is made by making pass=false.
+After getting out of the door the boolean attemptRunning will be false, and it will proceed to the next one and repeat the loop.
 
-- ❌ Si falles una porta, el joc acaba amb el missatge: El drac ha detectat la teva presència i t’ha expulsat del servidor!
-- ✅ Si encertes, apareix el missatge: El drac et respecta. Has desbloquejat el següent nivell!
-- 🏆 Si arribes a la **tercera porta** i l’obres amb èxit: Has desbloquejat el nivell final. Prepara’t per la batalla!
-
-> 🔍 **TIP:** Pensa en **bucles imbricats** per resoldre aquest repte.
-
----
 
 ## Chapter 3. Lotejar el botí 💰
 
